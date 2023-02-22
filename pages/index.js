@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import styles from '../styles/search.module.css'
 
 function Home () {
   const [query, setQuery] = useState('')
@@ -14,9 +15,14 @@ function Home () {
 
   return (
     <div>
-      <h1>Google Books API Search</h1>
-      <input type='text' value={query} onChange={(e) => setQuery(e.target.value)} />
-      <button onClick={searchBooks}>Search</button>
+      <div className={styles.container}>
+        <h1>Google Books API Search</h1>
+        <h2>by(shuya)</h2>
+      </div>
+      <div className={styles.container}>
+        <input type='text' value={query} onChange={(e) => setQuery(e.target.value)} />
+        <button onClick={searchBooks}>Search</button>
+      </div>
       {books.map((book) => (
         <div key={book.id}>
           <h2>{book.volumeInfo.title}</h2>
