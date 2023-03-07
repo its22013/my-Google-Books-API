@@ -1,0 +1,6 @@
+.backgroundimgs {
+  background-image: url("/images/lakaeslogo.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+}
